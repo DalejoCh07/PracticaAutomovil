@@ -133,7 +133,7 @@ public class Automovil {
     public double Aceleracion(double velocidadAcelerar){
         double verificador=0;
         verificador=this.velocidadAct+velocidadAcelerar;
-        if(verificador<this.velocidadMax){
+        if(verificador<=this.velocidadMax){
             this.velocidadAct=verificador;
         }
         return this.velocidadAct;
@@ -141,7 +141,7 @@ public class Automovil {
     public double Desacelerar(double velocidadDesacelerar){
         double verificador=0;
         verificador=this.velocidadAct-velocidadDesacelerar;
-        if(verificador>0){
+        if(verificador>=0){
             this.velocidadAct=verificador;
         }
         return this.velocidadAct;
