@@ -132,7 +132,7 @@ public class Automovil {
     
     public double Aceleracion(double velocidadAcelerar){
         double verificador=0;
-        verificador=velocidadAct+velocidadAcelerar;
+        verificador=this.velocidadAct+velocidadAcelerar;
         if(verificador<this.velocidadMax){
             this.velocidadAct=verificador;
         }
@@ -140,7 +140,7 @@ public class Automovil {
     }
     public double Desacelerar(double velocidadDesacelerar){
         double verificador=0;
-        verificador=velocidadAct-velocidadDesacelerar;
+        verificador=this.velocidadAct-velocidadDesacelerar;
         if(verificador>0){
             this.velocidadAct=verificador;
         }
@@ -148,7 +148,7 @@ public class Automovil {
     }
     public double Frenar(){
         this.velocidadAct=0;
-        return velocidadAct;
+        return this.velocidadAct;
     }
     public double calcTiempoLlegada(double distanciaRecorrer){
         double tiempoEstimado=0;
